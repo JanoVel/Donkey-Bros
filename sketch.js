@@ -76,7 +76,7 @@ function preload() {
   game.load.crossOrigin = "Anonymous";
   game.load.image("titlescreen", "assets/titlescreen.png");
   game.load.image("field", "assets/field.png");
-  game.load.image("screenOverlay", "assets/screenoverlay.png");
+  game.load.image("screenOverlay", "assets/screenOverlay.png");
   game.load.image("ball", "assets/ball.png");
   game.load.image("donkeyA", "assets/donkeyA.png");
   game.load.image("donkeyB", "assets/donkeyB.png");
