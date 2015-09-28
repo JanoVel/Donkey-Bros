@@ -60,6 +60,7 @@ function overlapDonkeyB(){
 }
 
 function createText(){
+  game.stage.backgroundColor = "#71F3FF";
   imgInit = game.add.sprite(6, 7, "titlescreen");
   textvs = game.add.text(90, 440, "press S or K\nto start");
   textvs.font = "Press Start 2P";
@@ -68,7 +69,7 @@ function createText(){
   textvs.fill = "#FFA397";
   textvs.stroke = "#DD5257";
   textvs.strokeThickness = 8;
-  imgOL = game.add.sprite(0, 0, "screenOverlay");
+  //imgOL = game.add.sprite(0, 0, "screenOverlay");
   soundHit = game.add.audio("ballHit");
 }
 
@@ -76,7 +77,7 @@ function preload() {
   game.load.crossOrigin = "Anonymous";
   game.load.image("titlescreen", "assets/titlescreen.png");
   game.load.image("field", "assets/field.png");
-  game.load.image("screenOverlay", "assets/screenOverlay.png");
+  //game.load.image("screenOverlay", "assets/screenOverlay.png");
   game.load.image("ball", "assets/ball.png");
   game.load.image("donkeyA", "assets/donkeyA.png");
   game.load.image("donkeyB", "assets/donkeyB.png");
@@ -88,7 +89,7 @@ function preload() {
 
 function create() {
   game.physics.startSystem(Phaser.Physics.ARCADE);
-  game.stage.backgroundColor = "#71F3FF";
+  game.stage.backgroundColor = "#222527";
 }
 
 function update () {
@@ -188,7 +189,7 @@ function update () {
         textvs.destroy();
         textvs2.destroy();
         textvs3.destroy();
-        imgOL.destroy();
+        //imgOL.destroy();
         imgField = game.add.sprite(0, 0, "field");
         textvs = game.add.text(90, 40, "HIGH SCORE");
         textvs.font = "Press Start 2P";
@@ -246,7 +247,7 @@ function update () {
         textvs6.fill = "#FFA397";
         textvs6.stroke = "#DD5257";
         textvs6.strokeThickness = 8;
-        imgOL = game.add.sprite(0, 0, "screenOverlay");
+        //imgOL = game.add.sprite(0, 0, "screenOverlay");
         var r = game.rnd.frac();
         if(r < 0.5){
           dir = -1;

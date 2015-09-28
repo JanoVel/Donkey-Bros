@@ -4,13 +4,17 @@
   <title>Donkey Bros.</title>
   <style>
     body {padding: 0; margin: 0;}
-    canvas {margin:20px auto;}
+    #gameContainer {width: 800; padding: 0; margin: 20px auto;}
+    canvas {position: absolute;}
+    img {display: block; position: absolute; z-index: 10;}
   </style>
   <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
   <script language="javascript" type="text/javascript" src="libs/phaser.min.js"></script>
   <script language="javascript" type="text/javascript" src="sketch.js"></script>
 </head>
 <body style="background-color:#84A4AD">
-  <div id="gameContainer"></div>
+  <div id="gameContainer">
+    <img src="assets/screenOverlay.png" alt="" width="800" height="600">
+  </div>
 </body>
 </html>
