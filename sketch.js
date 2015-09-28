@@ -69,7 +69,6 @@ function createText(){
   textvs.fill = "#FFA397";
   textvs.stroke = "#DD5257";
   textvs.strokeThickness = 8;
-  //imgOL = game.add.sprite(0, 0, "screenOverlay");
   soundHit = game.add.audio("ballHit");
 }
 
@@ -77,7 +76,6 @@ function preload() {
   game.load.crossOrigin = "Anonymous";
   game.load.image("titlescreen", "assets/titlescreen.png");
   game.load.image("field", "assets/field.png");
-  //game.load.image("screenOverlay", "assets/screenOverlay.png");
   game.load.image("ball", "assets/ball.png");
   game.load.image("donkeyA", "assets/donkeyA.png");
   game.load.image("donkeyB", "assets/donkeyB.png");
@@ -247,7 +245,6 @@ function update () {
         textvs6.fill = "#FFA397";
         textvs6.stroke = "#DD5257";
         textvs6.strokeThickness = 8;
-        //imgOL = game.add.sprite(0, 0, "screenOverlay");
         var r = game.rnd.frac();
         if(r < 0.5){
           dir = -1;
@@ -318,12 +315,8 @@ function update () {
       }
       var hiText = hiscore.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1,')
       textvs3.text = "" + hiText;
-      //textvs3.text = "" + pressedS;
       var loText = score.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1,');
       textvs4.text = "" + loText;
-      //textvs4.text = "" + pressedK;
-      //game.debug.body(donkeyA);
-      //game.debug.body(donkeyB);
       break;
     default:
       break;
